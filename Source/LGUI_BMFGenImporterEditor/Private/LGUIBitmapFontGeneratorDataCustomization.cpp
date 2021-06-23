@@ -41,7 +41,11 @@ public:
 		auto Package = FindPackage(NULL, *PackageName);
 		if (!IsValid(Package))
 		{
+#if ENGINE_MAJOR_VERSION >= 4 && ENGINE_MINOR_VERSION >= 26
+			Package = CreatePackage(*PackageName);
+#else
 			Package = CreatePackage(NULL, *PackageName);
+#endif
 		}
 		UTexture2D* NewTexture = FImageUtils::CreateTexture2D(Width, Height, Samples, Package, FPaths::GetCleanFilename(PackageName), RF_Standalone | RF_Public, TexParams);
 		NewTexture->LODGroup = LODGroup;
