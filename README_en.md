@@ -1,4 +1,6 @@
 [中文](./README.md)  
+#BitmapFontGenerator importer for LGUI UE4
+---
 **This is a LGUI's extension plugin, need LGUI version 2.13.1 and upward.**  
 This plugin allows us to import font generated from [BitmapFontGenerator](https://www.angelcode.com/products/bmfont/) as LGUI's font data, only support one texture file for one font.  
 ### For BitmapFontGenerator's settins, follow the image below:  

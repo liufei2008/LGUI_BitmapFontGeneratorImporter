@@ -1,4 +1,6 @@
 [English](./README_en.md)  
+#BitmapFontGenerator importer for LGUI UE4
+---
 **这是LGUI插件的一个扩展插件，需要LGUI 2.13.1及以上版本.**  
 此插件可以让LGUI导入[BitmapFontGenerator](https://www.angelcode.com/products/bmfont/)生成的文字图集，并在LGUI里当作font data来用, 只支持每个字体一张贴图.  
 ### 在BitmapFontGenerator中按照下图设置：
