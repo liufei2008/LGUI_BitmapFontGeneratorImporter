@@ -24,6 +24,10 @@ void FLGUI_BMFGenImporterEditorModule::StartupModule()
 		IAssetTools& AssetTools = FModuleManager::LoadModuleChecked<FAssetToolsModule>("AssetTools").Get();
 		//register AssetCategory
 		EAssetTypeCategories::Type LGUIAssetCategoryBit = AssetTools.FindAdvancedAssetCategory(FName(TEXT("LGUI")));
+		if (LGUIAssetCategoryBit == EAssetTypeCategories::Misc)
+		{
+			LGUIAssetCategoryBit = AssetTools.RegisterAdvancedAssetCategory(FName(TEXT("LGUI")), LOCTEXT("LGUIAssetCategory", "LGUI"));
+		}
 
 		FontDataTypeAction = MakeShareable(new FLGUIBitmapFontGeneratorDataTypeAction(LGUIAssetCategoryBit));
 		AssetTools.RegisterAssetTypeActions(FontDataTypeAction.ToSharedRef());
