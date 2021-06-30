@@ -3,6 +3,7 @@
 ---
 **This is a LGUI's extension plugin, need LGUI version 2.13.1 and upward.**  
 This plugin allows us to import font generated from [BitmapFontGenerator](https://www.angelcode.com/products/bmfont/) as LGUI's font data, only support one texture file for one font.  
+Tutorial video : [Bilibili](https://www.bilibili.com/video/BV11y4y1T75c/)  [Youtube](https://youtu.be/zt6S22_pm1g)  
 ### For BitmapFontGenerator's settins, follow the image below:  
 Font Settings:  
 ![](./Resources/BF_Settings1.png)   
