@@ -27,7 +27,7 @@ public:
 		TexParams.bUseAlpha = true;
 		TexParams.CompressionSettings = CompressionSettings;
 		TexParams.bDeferCompression = true;
-		TexParams.bSRGB = false;
+		TexParams.bSRGB = true;
 		TexParams.SourceGuidHash = FGuid::NewGuid();
 
 		auto ExistTexture = LoadObject<UTexture2D>(NULL, *PackageName);
