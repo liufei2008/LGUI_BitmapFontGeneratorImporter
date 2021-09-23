@@ -41,7 +41,7 @@ public:
 		auto Package = FindPackage(NULL, *PackageName);
 		if (!IsValid(Package))
 		{
-#if ENGINE_MAJOR_VERSION >= 4 && ENGINE_MINOR_VERSION >= 26
+#if (ENGINE_MAJOR_VERSION == 4 && ENGINE_MINOR_VERSION >= 25) || ENGINE_MAJOR_VERSION > 4
 			Package = CreatePackage(*PackageName);
 #else
 			Package = CreatePackage(NULL, *PackageName);
@@ -69,7 +69,7 @@ public:
 		//Create T2D!
 		if (ImageWrapper.IsValid() && ImageWrapper->SetCompressed(RawFileData.GetData(), RawFileData.Num()))
 		{
-#if ENGINE_MAJOR_VERSION >= 4 && ENGINE_MINOR_VERSION >= 25
+#if (ENGINE_MAJOR_VERSION == 4 && ENGINE_MINOR_VERSION >= 25) || ENGINE_MAJOR_VERSION > 4
 			return ImageWrapper->GetRaw(ERGBFormat::BGRA, 8, ResultRawData);
 #else
 			const TArray<uint8>* UncompressedBGRA = NULL;
