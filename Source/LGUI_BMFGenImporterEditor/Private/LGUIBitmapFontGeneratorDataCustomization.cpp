@@ -1,8 +1,8 @@
-// Copyright 2019-2021 LexLiu. All Rights Reserved.
+// Copyright 2021-present LexLiu. All Rights Reserved.
 
 #include "LGUIBitmapFontGeneratorDataCustomization.h"
 #include "LGUI_BMFGenImporterEditorPrivatePCH.h"
-#include "MISC/FileHelper.h"
+#include "Misc/FileHelper.h"
 #include "Widget/LGUIFileBrowser.h"
 
 #include "AssetRegistryModule.h"
@@ -64,7 +64,7 @@ public:
 
 		//Load From File
 		TArray<uint8> RawFileData;
-		if (!FFileHelper::LoadFileToArray(RawFileData, *ImagePath)) return NULL;
+		if (!FFileHelper::LoadFileToArray(RawFileData, *ImagePath)) return false;
 
 		//Create T2D!
 		if (ImageWrapper.IsValid() && ImageWrapper->SetCompressed(RawFileData.GetData(), RawFileData.Num()))
